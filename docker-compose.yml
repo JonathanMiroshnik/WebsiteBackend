@@ -6,8 +6,10 @@ services:
     container_name: backend-sensorcensor
     restart: unless-stopped
     networks:
-      default:
-        external:
-          name: devops_shared
+      - devops_shared
     env_file:
       - .env
+
+networks:
+  devops_shared:
+    external: true
