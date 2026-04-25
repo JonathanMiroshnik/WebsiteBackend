@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+python-dotenv
+beautifulsoup4
+openai
+httpx
+jinja2
