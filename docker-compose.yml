@@ -1,17 +1,13 @@
 version: '3.8'
 
 services:
-  backend:
+  app:
     build: .
-    container_name: websitebackend
+    container_name: backend-sensorcensor
     restart: unless-stopped
-    ports:
-      - "5000:5000"
+    networks:
+      default:
+        external:
+          name: devops_shared
     env_file:
       - .env
-    networks:
-      - devops_shared
-
-networks:
-  devops_shared:
-    external: true
